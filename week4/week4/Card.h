@@ -15,8 +15,8 @@ static NSRegularExpression *filenamePattern;
 
 @property NSString* shape;
 @property NSString* name;
-@property UIImage* image;
+@property NSString* path;
 
 -(Card*)initWithPath:(NSString*)path;
-
+-(UIImage*)image;
 @end

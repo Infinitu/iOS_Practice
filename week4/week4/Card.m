@@ -8,6 +8,8 @@
 
 #import "Card.h"
 
+__weak UIImage *_image;
+
 @implementation Card
 
 -(Card*)initWithPath:(NSString*)path{
@@ -20,14 +22,18 @@
                            regularExpressionWithPattern:@"([scdh]?)([^/\\.]+)\\.(?:png|jpg|jpeg|gif)$"
                            options:0 error:NULL];
     
-    self.image = [UIImage imageWithContentsOfFile:path];
+    self.path = path;
     
     NSTextCheckingResult *match = [filenamePattern firstMatchInString:path options:0 range:NSMakeRange(0, [path length])];
-    
     self.shape = [path substringWithRange:[match rangeAtIndex:1]];
     self.name = [path substringWithRange:[match rangeAtIndex:2]];
     
     return self;
 }
+
+-(UIImage*) image{
+    return [UIImage imageWithContentsOfFile:self.path];
+}
+
 
 @end

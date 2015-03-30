@@ -48,7 +48,10 @@
     Card *card = [[noti userInfo]objectForKey:@"card"];
     self.statusLabel.textColor = [UIColor blackColor];
     self.statusLabel.text = [NSString stringWithFormat:@"shape:%@ name:%@",card.shape,card.name];
-    self.cardImage.image = card.image;
+    @autoreleasepool {
+        UIImage *image = [card image];
+        self.cardImage.image = image;
+    }
 }
 
 -(void)shuffleCard:(NSNotification*)noti{
