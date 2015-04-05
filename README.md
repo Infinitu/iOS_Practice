@@ -8,3 +8,4 @@
 |  3   | 2015-3-19 20:35:28 GMT+9 | JsonParser, UIImage 사용법 실습                         |
 | 4_t  | --                       | UI Layout 실습.                                         |
 |  4   | 2015-3-28 22:36:05 GMT+9 | NSNotificationCenter, Shake Gesture, Card Random Select |
+|  5   | 2015-4-06 03:39:27 GMT+9 | MRC, Core Graphic Image Resize, Maual UIView Allocation |
