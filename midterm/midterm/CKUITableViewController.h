@@ -11,5 +11,6 @@
 @interface CKUITableViewController : UITableViewController
 
 @property NSMutableArray *models;
+@property NSMutableArray *sorted;
 
 @end

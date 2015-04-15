@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CKItemModel.h"
 
 @interface CKDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property NSDictionary *detailItem;
+@property(readonly) CKItemModel *detailItem;
+-(void)setDetailItem:(id)newDetailItem;
 @end
